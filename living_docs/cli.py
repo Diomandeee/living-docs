@@ -909,6 +909,222 @@ def cmd_examples(args):
     return 0
 
 
+# ============================================================
+# Gen 9 Commands
+# ============================================================
+
+def cmd_auto_pr(args):
+    """Create PRs for documentation fixes."""
+    from .auto_pr import AutoPRCreator, PRConfig, DocFixCollector, DocFix, format_pr_results
+    
+    project_root = Path(args.path).resolve()
+    
+    # Configure PR creator
+    config = PRConfig(
+        group_by=args.group_by,
+        draft=args.draft,
+        reviewers=args.reviewers or [],
+    )
+    
+    creator = AutoPRCreator(config, project_root)
+    collector = DocFixCollector(project_root)
+    
+    # Collect fixes from various sources
+    fixes = []
+    
+    if args.source in ('stale', 'all'):
+        print("🔍 Checking for stale documentation...")
+        calc = StalenessCalculator(project_root)
+        stale_docs = calc.analyze_all()
+        for doc in stale_docs:
+            if doc.get('score', 0) > 0.5:
+                path = doc.get('path', doc.get('doc', ''))
+                if path:
+                    full_path = project_root / path
+                    if full_path.exists():
+                        fixes.append(DocFix(
+                            file_path=path,
+                            original_content=full_path.read_text() if full_path.exists() else "",
+                            fixed_content=full_path.read_text() if full_path.exists() else "",
+                            fix_type="stale",
+                            description=f"Documentation outdated (staleness: {doc.get('score', 0):.0%})",
+                            severity="high" if doc.get('score', 0) > 0.7 else "medium",
+                            related_code=doc.get('code'),
+                        ))
+        print(f"   Found {len([f for f in fixes if f.fix_type == 'stale'])} stale docs")
+    
+    if args.source in ('coverage', 'all'):
+        print("🔍 Checking for missing documentation...")
+        try:
+            from .coverage import CoverageAnalyzer
+            analyzer = CoverageAnalyzer(project_root)
+            report = analyzer.analyze()
+            for gap in report.get('undocumented', [])[:5]:  # Limit to 5
+                fixes.append(DocFix(
+                    file_path=f"docs/{Path(gap).stem}.md",
+                    original_content="",
+                    fixed_content=f"# {Path(gap).stem}\n\nTODO: Document {gap}\n",
+                    fix_type="missing",
+                    description=f"Missing documentation for {gap}",
+                    severity="medium",
+                    related_code=gap,
+                ))
+            print(f"   Found {len([f for f in fixes if f.fix_type == 'missing'])} missing docs")
+        except Exception as e:
+            print(f"   Coverage check failed: {e}")
+    
+    if not fixes:
+        print("\n✅ No documentation fixes needed!")
+        return 0
+    
+    print(f"\n📋 Total fixes to create PRs for: {len(fixes)}")
+    
+    # Create PRs
+    results = creator.create_prs(
+        fixes,
+        dry_run=args.dry_run,
+        interactive=args.interactive
+    )
+    
+    # Output results
+    output = format_pr_results(results, args.format)
+    print(output)
+    
+    return 0
+
+
+def cmd_from_tests(args):
+    """Generate documentation examples from test files."""
+    from .test_to_example import (
+        TestExtractor, ExampleGenerator, ExampleFormatter,
+        ExampleQuality, format_examples_report
+    )
+    
+    project_root = Path(args.path).resolve()
+    
+    print("🧪 Test-to-Example Generator (Gen 9)\n")
+    
+    # Extract tests
+    extractor = TestExtractor(project_root)
+    
+    if args.files:
+        test_files = [project_root / f for f in args.files]
+    else:
+        test_files = extractor.find_test_files()
+    
+    print(f"📁 Found {len(test_files)} test files")
+    
+    all_tests = []
+    for tf in test_files:
+        tests = extractor.extract_from_file(tf)
+        all_tests.extend(tests)
+    
+    print(f"🔬 Extracted {len(all_tests)} test cases")
+    
+    # Filter by tags if specified
+    if args.tags:
+        all_tests = [t for t in all_tests if any(tag in t.tags for tag in args.tags)]
+        print(f"🏷️  After tag filter: {len(all_tests)} tests")
+    
+    # Generate examples
+    generator = ExampleGenerator(project_root=project_root)
+    
+    quality_map = {
+        'excellent': ExampleQuality.EXCELLENT,
+        'good': ExampleQuality.GOOD,
+        'fair': ExampleQuality.FAIR,
+        'poor': ExampleQuality.POOR,
+    }
+    min_quality = quality_map.get(args.min_quality, ExampleQuality.FAIR)
+    
+    examples = generator.generate_batch(
+        all_tests,
+        use_ai=args.use_ai,
+        min_quality=min_quality,
+        max_complexity=args.max_complexity
+    )
+    
+    print(f"✨ Generated {len(examples)} examples\n")
+    
+    # Format output
+    if args.format == 'json':
+        import json
+        output = json.dumps([ExampleFormatter.to_json(e) for e in examples], indent=2)
+    elif args.format == 'rst':
+        output = "\n\n".join(ExampleFormatter.to_rst(e) for e in examples)
+    else:  # markdown
+        output = "\n\n".join(ExampleFormatter.to_markdown(e, include_source=True) for e in examples)
+    
+    if args.output:
+        output_path = Path(args.output)
+        output_path.write_text(output)
+        print(f"📝 Written to {output_path}")
+    else:
+        print(output)
+    
+    # Also print summary
+    print("\n" + format_examples_report(examples, "human"))
+    
+    return 0
+
+
+def cmd_explore(args):
+    """Interactive documentation explorer."""
+    from .explorer import DocTreeBuilder, TerminalExplorer, SearchEngine, format_tree_ascii
+    
+    project_root = Path(args.path).resolve()
+    
+    print("📚 Documentation Explorer (Gen 9)\n")
+    
+    # Build tree
+    builder = DocTreeBuilder(project_root)
+    tree = builder.build(include_sections=True)
+    
+    node_count = len(tree.flatten())
+    print(f"📊 Indexed {node_count} documentation nodes")
+    
+    if args.tree_only:
+        # Just print tree
+        if args.format == 'json':
+            def node_to_dict(n):
+                return {
+                    'name': n.name,
+                    'type': n.node_type.value,
+                    'path': n.path,
+                    'staleness': n.staleness_score,
+                    'children': [node_to_dict(c) for c in n.children]
+                }
+            import json
+            print(json.dumps(node_to_dict(tree), indent=2))
+        else:
+            print(format_tree_ascii(tree))
+        return 0
+    
+    if args.search:
+        # Non-interactive search
+        engine = SearchEngine(tree)
+        results = engine.search(args.search)
+        
+        print(f"\n🔍 Search results for '{args.search}':\n")
+        for r in results[:10]:
+            print(f"📍 {r['path']}:{r['line']}")
+            highlighted = engine.highlight(r['match'], args.search)
+            print(f"   {highlighted}")
+            print()
+        
+        return 0
+    
+    # Full interactive mode
+    explorer = TerminalExplorer(tree)
+    
+    if args.simple:
+        explorer.run_simple()
+    else:
+        explorer.run()
+    
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(
         prog='living-docs',
@@ -1009,6 +1225,36 @@ def main():
     examples_parser.add_argument('--fail-on-invalid', action='store_true', help='Exit 1 if invalid examples')
     examples_parser.add_argument('--file', help='Check specific doc file')
     
+    # auto-pr (Gen 9)
+    auto_pr_parser = subparsers.add_parser('auto-pr', help='Create PRs for documentation fixes')
+    auto_pr_parser.add_argument('--dry-run', '-n', action='store_true', help='Preview without creating PRs')
+    auto_pr_parser.add_argument('--interactive', '-i', action='store_true', help='Confirm each PR')
+    auto_pr_parser.add_argument('--source', '-s', choices=['stale', 'ai', 'examples', 'coverage', 'all'], 
+                                default='all', help='Source of fixes')
+    auto_pr_parser.add_argument('--group-by', '-g', choices=['severity', 'type', 'directory', 'single'],
+                                default='severity', help='How to group fixes into PRs')
+    auto_pr_parser.add_argument('--draft', action='store_true', default=True, help='Create as draft PRs')
+    auto_pr_parser.add_argument('--reviewers', '-r', nargs='+', help='Add reviewers to PRs')
+    auto_pr_parser.add_argument('--format', '-f', choices=['human', 'json', 'markdown'], default='human')
+    
+    # from-tests (Gen 9)
+    from_tests_parser = subparsers.add_parser('from-tests', help='Generate documentation examples from test files')
+    from_tests_parser.add_argument('files', nargs='*', help='Specific test files (default: all)')
+    from_tests_parser.add_argument('--output', '-o', help='Output file for generated examples')
+    from_tests_parser.add_argument('--format', '-f', choices=['markdown', 'json', 'rst'], default='markdown')
+    from_tests_parser.add_argument('--use-ai', action='store_true', help='Use AI to improve examples')
+    from_tests_parser.add_argument('--min-quality', choices=['excellent', 'good', 'fair', 'poor'],
+                                   default='fair', help='Minimum example quality to include')
+    from_tests_parser.add_argument('--max-complexity', type=int, default=7, help='Max test complexity (1-10)')
+    from_tests_parser.add_argument('--tags', nargs='+', help='Filter by tags (api, edge_case, etc.)')
+    
+    # explore (Gen 9)
+    explore_parser = subparsers.add_parser('explore', help='Interactive documentation explorer')
+    explore_parser.add_argument('--simple', '-s', action='store_true', help='Use simple mode (no TUI)')
+    explore_parser.add_argument('--tree-only', '-t', action='store_true', help='Just print tree and exit')
+    explore_parser.add_argument('--search', '-q', help='Search query (non-interactive)')
+    explore_parser.add_argument('--format', '-f', choices=['ascii', 'json'], default='ascii')
+    
     args = parser.parse_args()
     
     commands = {
@@ -1029,6 +1275,10 @@ def main():
         'graph': cmd_graph,
         'coverage': cmd_coverage,
         'examples': cmd_examples,
+        # Gen 9
+        'auto-pr': cmd_auto_pr,
+        'from-tests': cmd_from_tests,
+        'explore': cmd_explore,
     }
     
     return commands[args.command](args)

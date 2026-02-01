@@ -457,10 +457,188 @@ examples:
 | **`coverage`** | 8 | 🆕 Coverage visualization |
 | **`examples`** | 8 | 🆕 Validate code examples |
 
+## Gen 9 Features 🆕🆕🆕
+
+### Auto-PR Creation
+
+Automatically create pull requests for documentation fixes:
+
+```bash
+# Preview what PRs would be created
+living-docs auto-pr --dry-run
+
+# Create PRs interactively
+living-docs auto-pr --interactive
+
+# Create PRs from specific sources
+living-docs auto-pr --source stale        # Only stale docs
+living-docs auto-pr --source coverage     # Only missing docs
+living-docs auto-pr --source all          # Everything
+
+# Group fixes differently
+living-docs auto-pr --group-by severity   # One PR per severity level
+living-docs auto-pr --group-by type       # One PR per fix type
+living-docs auto-pr --group-by single     # One PR per fix
+
+# Add reviewers
+living-docs auto-pr --reviewers alice bob
+```
+
+The auto-PR system:
+- Creates branches with meaningful names (`docs/stale-api-20260201-0845`)
+- Generates conventional commit messages
+- Creates detailed PR descriptions with severity indicators
+- Supports GitHub (via `gh` CLI) and GitLab (via `glab` CLI)
+
+### Test-to-Example Generation
+
+Transform your test files into documentation examples:
+
+```bash
+# Generate examples from all tests
+living-docs from-tests
+
+# Specific test files
+living-docs from-tests tests/test_api.py tests/test_models.py
+
+# Use AI to improve examples (requires API key)
+living-docs from-tests --use-ai
+
+# Filter by quality threshold
+living-docs from-tests --min-quality good
+
+# Filter by complexity (1-10)
+living-docs from-tests --max-complexity 5
+
+# Filter by tags
+living-docs from-tests --tags api edge_case
+
+# Output formats
+living-docs from-tests --format markdown --output EXAMPLES.md
+living-docs from-tests --format json
+living-docs from-tests --format rst
+```
+
+Example transformation:
+
+**Before (test):**
+```python
+def test_user_creation_with_email():
+    """Users can be created with email."""
+    user = User.create(email="test@example.com")
+    assert user.id is not None
+    assert user.email == "test@example.com"
+```
+
+**After (example):**
+```markdown
+### User Creation With Email
+
+Users can be created with email.
+
+​```python
+user = User.create(email="test@example.com")
+print(user.id)  # => 1
+print(user.email)  # => "test@example.com"
+​```
+```
+
+### Interactive Documentation Explorer
+
+Browse your documentation in the terminal:
+
+```bash
+# Launch full interactive explorer
+living-docs explore
+
+# Simple mode (no TUI dependencies)
+living-docs explore --simple
+
+# Just print the tree
+living-docs explore --tree-only
+
+# Non-interactive search
+living-docs explore --search "authentication"
+
+# JSON tree output
+living-docs explore --tree-only --format json
+```
+
+**Interactive controls:**
+- `↑↓` / `jk` - Navigate
+- `Enter` - Open/expand
+- `b` - Back
+- `/` - Search
+- `h` - Show health
+- `p` - Toggle preview
+- `q` - Quit
+
+The explorer shows:
+- 📁 Documentation tree structure
+- 🔴🟡🟢 Health indicators (stale/warning/healthy)
+- Full-text search with highlighting
+- Content preview with sections
+
+### Gen 9 Configuration
+
+```yaml
+# Auto-PR settings
+auto_pr:
+  provider: github  # github, gitlab
+  base_branch: main
+  branch_prefix: "docs/"
+  draft: true
+  labels:
+    - documentation
+    - auto-generated
+  reviewers: []
+  max_files_per_pr: 10
+  group_by: severity
+
+# Test-to-example settings
+test_to_example:
+  use_ai: false
+  min_quality: fair
+  max_complexity: 7
+  include_tags:
+    - api
+    - example
+  exclude_tags:
+    - regression
+
+# Explorer settings
+explorer:
+  include_sections: true
+  show_health: true
+```
+
+## Commands Reference
+
+| Command | Gen | Description |
+|---------|-----|-------------|
+| `init` | 5 | Initialize Living Docs |
+| `watch` | 5 | Start file watcher daemon |
+| `health` | 5 | Show documentation health |
+| `stale` | 5 | List stale documentation |
+| `generate` | 5 | Generate missing docs |
+| `sync` | 5 | One-shot sync |
+| `improve` | 6 | AI-powered improvement |
+| `ci` | 6 | CI/CD integration check |
+| `related` | 6 | Semantic similarity search |
+| `setup-ci` | 6 | Generate CI config |
+| `diff` | 7 | Analyze git diff impact |
+| `pr-check` | 7 | Check PR for doc impact |
+| `graph` | 8 | Knowledge graph |
+| `coverage` | 8 | Coverage visualization |
+| `examples` | 8 | Validate code examples |
+| **`auto-pr`** | 9 | 🆕 Create PRs for doc fixes |
+| **`from-tests`** | 9 | 🆕 Generate examples from tests |
+| **`explore`** | 9 | 🆕 Interactive explorer |
+
 ## HEF Evolution
 
 **Instance:** inst_20260131082143_322  
-**Generation:** 8  
+**Generation:** 9  
 **Origin:** Dream Weaver idea incubation
 
 ### Evolution History
@@ -471,14 +649,14 @@ examples:
 | 6 | AI improvement, CI/CD integration, semantic similarity |
 | 7 | Diff analysis, PR checks, code→doc impact mapping |
 | 8 | Knowledge graph, coverage visualization, example validation |
+| 9 | Auto-PR creation, test-to-example generation, interactive explorer |
 
-### Future Directions (Gen 9+)
+### Future Directions (Gen 10+)
 - VSCode extension for inline staleness warnings
-- Auto-PR creation for doc updates
 - Multi-language support (Go, Rust, Java)
-- LLM-powered example generation from tests
 - Watch mode with real-time PR annotations
-- Interactive documentation explorer
+- Voice-guided documentation navigation
+- Collaborative documentation editing
 
 ---
 
