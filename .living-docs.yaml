@@ -1,0 +1,21 @@
+# Living Documentation Configuration
+
+# Code sources to watch
+sources:
+  - src/**/*.py
+  - lib/**/*.ts
+
+# Documentation directories
+docs:
+  - docs/
+  - README.md
+
+# Staleness thresholds (days)
+staleness:
+  warning: 30
+  critical: 90
+
+# AI provider (optional)
+# ai:
+#   provider: anthropic
+#   model: claude-sonnet-4-20250514

@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "living-docs"
+version = "0.1.0"
+description = "Documentation that evolves with your code"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Living Docs Contributors"}
+]
+keywords = ["documentation", "docs", "sync", "automation", "developer-tools"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Documentation",
+]
+
+dependencies = []
+
+[project.optional-dependencies]
+watch = ["watchdog>=3.0"]
+yaml = ["pyyaml>=6.0"]
+ai = ["anthropic>=0.30", "openai>=1.0"]
+embeddings = ["sentence-transformers>=2.0"]
+voyage = ["voyageai>=0.2"]
+all = ["watchdog>=3.0", "pyyaml>=6.0", "anthropic>=0.30", "sentence-transformers>=2.0"]
+full = ["watchdog>=3.0", "pyyaml>=6.0", "anthropic>=0.30", "openai>=1.0", "sentence-transformers>=2.0", "voyageai>=0.2"]
+dev = ["pytest", "black", "mypy"]
+
+[project.scripts]
+living-docs = "living_docs.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/living-docs/living-docs"
+Documentation = "https://living-docs.dev"
+Repository = "https://github.com/living-docs/living-docs"
+Issues = "https://github.com/living-docs/living-docs/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["living_docs*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true

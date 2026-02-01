@@ -1,0 +1,4324 @@
+{
+  "nodes": [
+    {
+      "id": "code:living_docs/sync.py",
+      "type": "code",
+      "name": "sync",
+      "path": "living_docs/sync.py",
+      "line_start": 0,
+      "line_end": 0,
+      "content_hash": "d1939ddf",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/sync.py:SyncAction",
+      "type": "class",
+      "name": "SyncAction",
+      "path": "living_docs/sync.py",
+      "line_start": 13,
+      "line_end": 48,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/sync.py:SyncEngine",
+      "type": "class",
+      "name": "SyncEngine",
+      "path": "living_docs/sync.py",
+      "line_start": 51,
+      "line_end": 238,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/sync.py:get_diff",
+      "type": "function",
+      "name": "get_diff",
+      "path": "living_docs/sync.py",
+      "line_start": 23,
+      "line_end": 48,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/sync.py:__init__",
+      "type": "function",
+      "name": "__init__",
+      "path": "living_docs/sync.py",
+      "line_start": 54,
+      "line_end": 57,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/sync.py:scan_code",
+      "type": "function",
+      "name": "scan_code",
+      "path": "living_docs/sync.py",
+      "line_start": 59,
+      "line_end": 69,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/sync.py:find_doc_for_code",
+      "type": "function",
+      "name": "find_doc_for_code",
+      "path": "living_docs/sync.py",
+      "line_start": 71,
+      "line_end": 91,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/sync.py:generate_doc_content",
+      "type": "function",
+      "name": "generate_doc_content",
+      "path": "living_docs/sync.py",
+      "line_start": 93,
+      "line_end": 158,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/sync.py:compute_sync_actions",
+      "type": "function",
+      "name": "compute_sync_actions",
+      "path": "living_docs/sync.py",
+      "line_start": 160,
+      "line_end": 204,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/sync.py:_content_differs",
+      "type": "function",
+      "name": "_content_differs",
+      "path": "living_docs/sync.py",
+      "line_start": 206,
+      "line_end": 217,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/sync.py:apply_action",
+      "type": "function",
+      "name": "apply_action",
+      "path": "living_docs/sync.py",
+      "line_start": 219,
+      "line_end": 238,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "code:living_docs/semantic.py",
+      "type": "code",
+      "name": "semantic",
+      "path": "living_docs/semantic.py",
+      "line_start": 0,
+      "line_end": 0,
+      "content_hash": "1ca6f526",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/semantic.py:Chunk",
+      "type": "class",
+      "name": "Chunk",
+      "path": "living_docs/semantic.py",
+      "line_start": 18,
+      "line_end": 27,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/semantic.py:SimilarityResult",
+      "type": "class",
+      "name": "SimilarityResult",
+      "path": "living_docs/semantic.py",
+      "line_start": 31,
+      "line_end": 36,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/semantic.py:EmbeddingProvider",
+      "type": "class",
+      "name": "EmbeddingProvider",
+      "path": "living_docs/semantic.py",
+      "line_start": 39,
+      "line_end": 46,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/semantic.py:AnthropicEmbeddings",
+      "type": "class",
+      "name": "AnthropicEmbeddings",
+      "path": "living_docs/semantic.py",
+      "line_start": 49,
+      "line_end": 64,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/semantic.py:OpenAIEmbeddings",
+      "type": "class",
+      "name": "OpenAIEmbeddings",
+      "path": "living_docs/semantic.py",
+      "line_start": 67,
+      "line_end": 82,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/semantic.py:LocalEmbeddings",
+      "type": "class",
+      "name": "LocalEmbeddings",
+      "path": "living_docs/semantic.py",
+      "line_start": 85,
+      "line_end": 128,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/semantic.py:SemanticIndex",
+      "type": "class",
+      "name": "SemanticIndex",
+      "path": "living_docs/semantic.py",
+      "line_start": 131,
+      "line_end": 437,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:get_embedding_provider",
+      "type": "function",
+      "name": "get_embedding_provider",
+      "path": "living_docs/semantic.py",
+      "line_start": 440,
+      "line_end": 460,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:embed",
+      "type": "function",
+      "name": "embed",
+      "path": "living_docs/semantic.py",
+      "line_start": 105,
+      "line_end": 111,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:embed_single",
+      "type": "function",
+      "name": "embed_single",
+      "path": "living_docs/semantic.py",
+      "line_start": 45,
+      "line_end": 46,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:__init__",
+      "type": "function",
+      "name": "__init__",
+      "path": "living_docs/semantic.py",
+      "line_start": 134,
+      "line_end": 141,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:_get_st_model",
+      "type": "function",
+      "name": "_get_st_model",
+      "path": "living_docs/semantic.py",
+      "line_start": 95,
+      "line_end": 103,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:_embed_ollama",
+      "type": "function",
+      "name": "_embed_ollama",
+      "path": "living_docs/semantic.py",
+      "line_start": 113,
+      "line_end": 128,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:_compute_hash",
+      "type": "function",
+      "name": "_compute_hash",
+      "path": "living_docs/semantic.py",
+      "line_start": 143,
+      "line_end": 145,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:_chunk_code",
+      "type": "function",
+      "name": "_chunk_code",
+      "path": "living_docs/semantic.py",
+      "line_start": 147,
+      "line_end": 171,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:_chunk_doc",
+      "type": "function",
+      "name": "_chunk_doc",
+      "path": "living_docs/semantic.py",
+      "line_start": 173,
+      "line_end": 229,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:add_file",
+      "type": "function",
+      "name": "add_file",
+      "path": "living_docs/semantic.py",
+      "line_start": 231,
+      "line_end": 250,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:build_embeddings",
+      "type": "function",
+      "name": "build_embeddings",
+      "path": "living_docs/semantic.py",
+      "line_start": 252,
+      "line_end": 294,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:_cosine_similarity",
+      "type": "function",
+      "name": "_cosine_similarity",
+      "path": "living_docs/semantic.py",
+      "line_start": 296,
+      "line_end": 305,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:find_related_docs",
+      "type": "function",
+      "name": "find_related_docs",
+      "path": "living_docs/semantic.py",
+      "line_start": 307,
+      "line_end": 344,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:find_docs_needing_update",
+      "type": "function",
+      "name": "find_docs_needing_update",
+      "path": "living_docs/semantic.py",
+      "line_start": 346,
+      "line_end": 363,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:get_code_context_for_doc",
+      "type": "function",
+      "name": "get_code_context_for_doc",
+      "path": "living_docs/semantic.py",
+      "line_start": 365,
+      "line_end": 398,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:save",
+      "type": "function",
+      "name": "save",
+      "path": "living_docs/semantic.py",
+      "line_start": 400,
+      "line_end": 418,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/semantic.py:load",
+      "type": "function",
+      "name": "load",
+      "path": "living_docs/semantic.py",
+      "line_start": 420,
+      "line_end": 437,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "code:living_docs/cicd.py",
+      "type": "code",
+      "name": "cicd",
+      "path": "living_docs/cicd.py",
+      "line_start": 0,
+      "line_end": 0,
+      "content_hash": "e967603d",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/cicd.py:CIResult",
+      "type": "class",
+      "name": "CIResult",
+      "path": "living_docs/cicd.py",
+      "line_start": 16,
+      "line_end": 20,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/cicd.py:CIReport",
+      "type": "class",
+      "name": "CIReport",
+      "path": "living_docs/cicd.py",
+      "line_start": 24,
+      "line_end": 85,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cicd.py:run_ci_check",
+      "type": "function",
+      "name": "run_ci_check",
+      "path": "living_docs/cicd.py",
+      "line_start": 88,
+      "line_end": 186,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cicd.py:generate_github_action",
+      "type": "function",
+      "name": "generate_github_action",
+      "path": "living_docs/cicd.py",
+      "line_start": 189,
+      "line_end": 265,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cicd.py:generate_pre_commit_hook",
+      "type": "function",
+      "name": "generate_pre_commit_hook",
+      "path": "living_docs/cicd.py",
+      "line_start": 268,
+      "line_end": 281,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cicd.py:generate_gitlab_ci",
+      "type": "function",
+      "name": "generate_gitlab_ci",
+      "path": "living_docs/cicd.py",
+      "line_start": 284,
+      "line_end": 301,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cicd.py:cmd_ci",
+      "type": "function",
+      "name": "cmd_ci",
+      "path": "living_docs/cicd.py",
+      "line_start": 304,
+      "line_end": 350,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cicd.py:to_github_output",
+      "type": "function",
+      "name": "to_github_output",
+      "path": "living_docs/cicd.py",
+      "line_start": 35,
+      "line_end": 44,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cicd.py:to_github_annotations",
+      "type": "function",
+      "name": "to_github_annotations",
+      "path": "living_docs/cicd.py",
+      "line_start": 46,
+      "line_end": 56,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cicd.py:to_markdown",
+      "type": "function",
+      "name": "to_markdown",
+      "path": "living_docs/cicd.py",
+      "line_start": 58,
+      "line_end": 85,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "code:living_docs/ai.py",
+      "type": "code",
+      "name": "ai",
+      "path": "living_docs/ai.py",
+      "line_start": 0,
+      "line_end": 0,
+      "content_hash": "e889a378",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/ai.py:DocAnalysis",
+      "type": "class",
+      "name": "DocAnalysis",
+      "path": "living_docs/ai.py",
+      "line_start": 17,
+      "line_end": 26,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/ai.py:AIConfig",
+      "type": "class",
+      "name": "AIConfig",
+      "path": "living_docs/ai.py",
+      "line_start": 30,
+      "line_end": 37,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/ai.py:DocImprover",
+      "type": "class",
+      "name": "DocImprover",
+      "path": "living_docs/ai.py",
+      "line_start": 40,
+      "line_end": 307,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/ai.py:load_ai_config",
+      "type": "function",
+      "name": "load_ai_config",
+      "path": "living_docs/ai.py",
+      "line_start": 310,
+      "line_end": 320,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/ai.py:__init__",
+      "type": "function",
+      "name": "__init__",
+      "path": "living_docs/ai.py",
+      "line_start": 104,
+      "line_end": 106,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/ai.py:_get_api_key",
+      "type": "function",
+      "name": "_get_api_key",
+      "path": "living_docs/ai.py",
+      "line_start": 108,
+      "line_end": 123,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/ai.py:_call_anthropic",
+      "type": "function",
+      "name": "_call_anthropic",
+      "path": "living_docs/ai.py",
+      "line_start": 125,
+      "line_end": 141,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/ai.py:_call_openai",
+      "type": "function",
+      "name": "_call_openai",
+      "path": "living_docs/ai.py",
+      "line_start": 143,
+      "line_end": 159,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/ai.py:_call_local",
+      "type": "function",
+      "name": "_call_local",
+      "path": "living_docs/ai.py",
+      "line_start": 161,
+      "line_end": 180,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/ai.py:_call_llm",
+      "type": "function",
+      "name": "_call_llm",
+      "path": "living_docs/ai.py",
+      "line_start": 182,
+      "line_end": 191,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/ai.py:_extract_json",
+      "type": "function",
+      "name": "_extract_json",
+      "path": "living_docs/ai.py",
+      "line_start": 193,
+      "line_end": 209,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/ai.py:analyze",
+      "type": "function",
+      "name": "analyze",
+      "path": "living_docs/ai.py",
+      "line_start": 211,
+      "line_end": 244,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/ai.py:improve",
+      "type": "function",
+      "name": "improve",
+      "path": "living_docs/ai.py",
+      "line_start": 246,
+      "line_end": 284,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/ai.py:batch_analyze",
+      "type": "function",
+      "name": "batch_analyze",
+      "path": "living_docs/ai.py",
+      "line_start": 286,
+      "line_end": 307,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "code:living_docs/graph.py",
+      "type": "code",
+      "name": "graph",
+      "path": "living_docs/graph.py",
+      "line_start": 0,
+      "line_end": 0,
+      "content_hash": "ec285e9d",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/graph.py:EdgeType",
+      "type": "class",
+      "name": "EdgeType",
+      "path": "living_docs/graph.py",
+      "line_start": 24,
+      "line_end": 34,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/graph.py:NodeType",
+      "type": "class",
+      "name": "NodeType",
+      "path": "living_docs/graph.py",
+      "line_start": 37,
+      "line_end": 45,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/graph.py:Node",
+      "type": "class",
+      "name": "Node",
+      "path": "living_docs/graph.py",
+      "line_start": 49,
+      "line_end": 64,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/graph.py:Edge",
+      "type": "class",
+      "name": "Edge",
+      "path": "living_docs/graph.py",
+      "line_start": 68,
+      "line_end": 77,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/graph.py:DocGraph",
+      "type": "class",
+      "name": "DocGraph",
+      "path": "living_docs/graph.py",
+      "line_start": 80,
+      "line_end": 355,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/graph.py:GraphBuilder",
+      "type": "class",
+      "name": "GraphBuilder",
+      "path": "living_docs/graph.py",
+      "line_start": 358,
+      "line_end": 593,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:get_reading_order",
+      "type": "function",
+      "name": "get_reading_order",
+      "path": "living_docs/graph.py",
+      "line_start": 596,
+      "line_end": 618,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:suggest_navigation",
+      "type": "function",
+      "name": "suggest_navigation",
+      "path": "living_docs/graph.py",
+      "line_start": 621,
+      "line_end": 655,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:__hash__",
+      "type": "function",
+      "name": "__hash__",
+      "path": "living_docs/graph.py",
+      "line_start": 76,
+      "line_end": 77,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:__eq__",
+      "type": "function",
+      "name": "__eq__",
+      "path": "living_docs/graph.py",
+      "line_start": 63,
+      "line_end": 64,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:__init__",
+      "type": "function",
+      "name": "__init__",
+      "path": "living_docs/graph.py",
+      "line_start": 368,
+      "line_end": 371,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:add_node",
+      "type": "function",
+      "name": "add_node",
+      "path": "living_docs/graph.py",
+      "line_start": 94,
+      "line_end": 96,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:add_edge",
+      "type": "function",
+      "name": "add_edge",
+      "path": "living_docs/graph.py",
+      "line_start": 98,
+      "line_end": 102,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:get_node",
+      "type": "function",
+      "name": "get_node",
+      "path": "living_docs/graph.py",
+      "line_start": 104,
+      "line_end": 106,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:get_neighbors",
+      "type": "function",
+      "name": "get_neighbors",
+      "path": "living_docs/graph.py",
+      "line_start": 108,
+      "line_end": 127,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:find_path",
+      "type": "function",
+      "name": "find_path",
+      "path": "living_docs/graph.py",
+      "line_start": 129,
+      "line_end": 159,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:get_orphans",
+      "type": "function",
+      "name": "get_orphans",
+      "path": "living_docs/graph.py",
+      "line_start": 161,
+      "line_end": 172,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:get_hubs",
+      "type": "function",
+      "name": "get_hubs",
+      "path": "living_docs/graph.py",
+      "line_start": 174,
+      "line_end": 192,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:get_subgraph",
+      "type": "function",
+      "name": "get_subgraph",
+      "path": "living_docs/graph.py",
+      "line_start": 194,
+      "line_end": 230,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:to_dict",
+      "type": "function",
+      "name": "to_dict",
+      "path": "living_docs/graph.py",
+      "line_start": 232,
+      "line_end": 258,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:from_dict",
+      "type": "function",
+      "name": "from_dict",
+      "path": "living_docs/graph.py",
+      "line_start": 261,
+      "line_end": 288,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:save",
+      "type": "function",
+      "name": "save",
+      "path": "living_docs/graph.py",
+      "line_start": 290,
+      "line_end": 295,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:load",
+      "type": "function",
+      "name": "load",
+      "path": "living_docs/graph.py",
+      "line_start": 297,
+      "line_end": 311,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:to_mermaid",
+      "type": "function",
+      "name": "to_mermaid",
+      "path": "living_docs/graph.py",
+      "line_start": 313,
+      "line_end": 355,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:build",
+      "type": "function",
+      "name": "build",
+      "path": "living_docs/graph.py",
+      "line_start": 373,
+      "line_end": 390,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:_add_doc_nodes",
+      "type": "function",
+      "name": "_add_doc_nodes",
+      "path": "living_docs/graph.py",
+      "line_start": 392,
+      "line_end": 399,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:_add_doc_file",
+      "type": "function",
+      "name": "_add_doc_file",
+      "path": "living_docs/graph.py",
+      "line_start": 401,
+      "line_end": 458,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:_add_code_nodes",
+      "type": "function",
+      "name": "_add_code_nodes",
+      "path": "living_docs/graph.py",
+      "line_start": 460,
+      "line_end": 467,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:_add_code_file",
+      "type": "function",
+      "name": "_add_code_file",
+      "path": "living_docs/graph.py",
+      "line_start": 469,
+      "line_end": 527,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:_extract_references",
+      "type": "function",
+      "name": "_extract_references",
+      "path": "living_docs/graph.py",
+      "line_start": 529,
+      "line_end": 565,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/graph.py:_link_docs_to_code",
+      "type": "function",
+      "name": "_link_docs_to_code",
+      "path": "living_docs/graph.py",
+      "line_start": 567,
+      "line_end": 593,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "code:living_docs/__init__.py",
+      "type": "code",
+      "name": "__init__",
+      "path": "living_docs/__init__.py",
+      "line_start": 0,
+      "line_end": 0,
+      "content_hash": "75aed27d",
+      "metadata": {}
+    },
+    {
+      "id": "code:living_docs/coverage.py",
+      "type": "code",
+      "name": "coverage",
+      "path": "living_docs/coverage.py",
+      "line_start": 0,
+      "line_end": 0,
+      "content_hash": "4e1ab052",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/coverage.py:CoverageItem",
+      "type": "class",
+      "name": "CoverageItem",
+      "path": "living_docs/coverage.py",
+      "line_start": 25,
+      "line_end": 54,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/coverage.py:FileCoverage",
+      "type": "class",
+      "name": "FileCoverage",
+      "path": "living_docs/coverage.py",
+      "line_start": 58,
+      "line_end": 86,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/coverage.py:CoverageReport",
+      "type": "class",
+      "name": "CoverageReport",
+      "path": "living_docs/coverage.py",
+      "line_start": 90,
+      "line_end": 131,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/coverage.py:CoverageAnalyzer",
+      "type": "class",
+      "name": "CoverageAnalyzer",
+      "path": "living_docs/coverage.py",
+      "line_start": 134,
+      "line_end": 432,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/coverage.py:CoverageFormatter",
+      "type": "class",
+      "name": "CoverageFormatter",
+      "path": "living_docs/coverage.py",
+      "line_start": 435,
+      "line_end": 636,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:generate_coverage_report",
+      "type": "function",
+      "name": "generate_coverage_report",
+      "path": "living_docs/coverage.py",
+      "line_start": 639,
+      "line_end": 655,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:is_documented",
+      "type": "function",
+      "name": "is_documented",
+      "path": "living_docs/coverage.py",
+      "line_start": 38,
+      "line_end": 39,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:coverage_score",
+      "type": "function",
+      "name": "coverage_score",
+      "path": "living_docs/coverage.py",
+      "line_start": 42,
+      "line_end": 54,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:coverage_percent",
+      "type": "function",
+      "name": "coverage_percent",
+      "path": "living_docs/coverage.py",
+      "line_start": 66,
+      "line_end": 69,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:badge_color",
+      "type": "function",
+      "name": "badge_color",
+      "path": "living_docs/coverage.py",
+      "line_start": 72,
+      "line_end": 86,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:overall_percent",
+      "type": "function",
+      "name": "overall_percent",
+      "path": "living_docs/coverage.py",
+      "line_start": 101,
+      "line_end": 104,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:to_dict",
+      "type": "function",
+      "name": "to_dict",
+      "path": "living_docs/coverage.py",
+      "line_start": 106,
+      "line_end": 128,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:to_json",
+      "type": "function",
+      "name": "to_json",
+      "path": "living_docs/coverage.py",
+      "line_start": 130,
+      "line_end": 131,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:__init__",
+      "type": "function",
+      "name": "__init__",
+      "path": "living_docs/coverage.py",
+      "line_start": 137,
+      "line_end": 140,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:analyze",
+      "type": "function",
+      "name": "analyze",
+      "path": "living_docs/coverage.py",
+      "line_start": 142,
+      "line_end": 180,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:_should_ignore",
+      "type": "function",
+      "name": "_should_ignore",
+      "path": "living_docs/coverage.py",
+      "line_start": 182,
+      "line_end": 193,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:_analyze_file",
+      "type": "function",
+      "name": "_analyze_file",
+      "path": "living_docs/coverage.py",
+      "line_start": 195,
+      "line_end": 204,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:_analyze_python",
+      "type": "function",
+      "name": "_analyze_python",
+      "path": "living_docs/coverage.py",
+      "line_start": 206,
+      "line_end": 285,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:_analyze_javascript",
+      "type": "function",
+      "name": "_analyze_javascript",
+      "path": "living_docs/coverage.py",
+      "line_start": 287,
+      "line_end": 364,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:_assess_docstring_quality",
+      "type": "function",
+      "name": "_assess_docstring_quality",
+      "path": "living_docs/coverage.py",
+      "line_start": 366,
+      "line_end": 396,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:_save_history",
+      "type": "function",
+      "name": "_save_history",
+      "path": "living_docs/coverage.py",
+      "line_start": 398,
+      "line_end": 422,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:get_trend",
+      "type": "function",
+      "name": "get_trend",
+      "path": "living_docs/coverage.py",
+      "line_start": 424,
+      "line_end": 432,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:to_ascii_treemap",
+      "type": "function",
+      "name": "to_ascii_treemap",
+      "path": "living_docs/coverage.py",
+      "line_start": 439,
+      "line_end": 465,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:to_markdown",
+      "type": "function",
+      "name": "to_markdown",
+      "path": "living_docs/coverage.py",
+      "line_start": 468,
+      "line_end": 508,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:to_badge_url",
+      "type": "function",
+      "name": "to_badge_url",
+      "path": "living_docs/coverage.py",
+      "line_start": 511,
+      "line_end": 529,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:to_html_treemap",
+      "type": "function",
+      "name": "to_html_treemap",
+      "path": "living_docs/coverage.py",
+      "line_start": 532,
+      "line_end": 616,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/coverage.py:to_trend_sparkline",
+      "type": "function",
+      "name": "to_trend_sparkline",
+      "path": "living_docs/coverage.py",
+      "line_start": 619,
+      "line_end": 636,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "code:living_docs/parser.py",
+      "type": "code",
+      "name": "parser",
+      "path": "living_docs/parser.py",
+      "line_start": 0,
+      "line_end": 0,
+      "content_hash": "f4da822e",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/parser.py:DocItem",
+      "type": "class",
+      "name": "DocItem",
+      "path": "living_docs/parser.py",
+      "line_start": 11,
+      "line_end": 51,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/parser.py:PythonParser",
+      "type": "class",
+      "name": "PythonParser",
+      "path": "living_docs/parser.py",
+      "line_start": 54,
+      "line_end": 201,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/parser.py:TypeScriptParser",
+      "type": "class",
+      "name": "TypeScriptParser",
+      "path": "living_docs/parser.py",
+      "line_start": 204,
+      "line_end": 239,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/parser.py:get_parser",
+      "type": "function",
+      "name": "get_parser",
+      "path": "living_docs/parser.py",
+      "line_start": 242,
+      "line_end": 251,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/parser.py:is_documented",
+      "type": "function",
+      "name": "is_documented",
+      "path": "living_docs/parser.py",
+      "line_start": 23,
+      "line_end": 24,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/parser.py:doc_quality_score",
+      "type": "function",
+      "name": "doc_quality_score",
+      "path": "living_docs/parser.py",
+      "line_start": 27,
+      "line_end": 51,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/parser.py:parse_file",
+      "type": "function",
+      "name": "parse_file",
+      "path": "living_docs/parser.py",
+      "line_start": 207,
+      "line_end": 239,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/parser.py:_parse_function",
+      "type": "function",
+      "name": "_parse_function",
+      "path": "living_docs/parser.py",
+      "line_start": 89,
+      "line_end": 101,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/parser.py:_parse_class",
+      "type": "function",
+      "name": "_parse_class",
+      "path": "living_docs/parser.py",
+      "line_start": 103,
+      "line_end": 115,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/parser.py:_build_signature",
+      "type": "function",
+      "name": "_build_signature",
+      "path": "living_docs/parser.py",
+      "line_start": 117,
+      "line_end": 141,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/parser.py:_get_annotation",
+      "type": "function",
+      "name": "_get_annotation",
+      "path": "living_docs/parser.py",
+      "line_start": 143,
+      "line_end": 155,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/parser.py:_get_name",
+      "type": "function",
+      "name": "_get_name",
+      "path": "living_docs/parser.py",
+      "line_start": 157,
+      "line_end": 163,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/parser.py:_extract_imports",
+      "type": "function",
+      "name": "_extract_imports",
+      "path": "living_docs/parser.py",
+      "line_start": 165,
+      "line_end": 175,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/parser.py:_extract_examples",
+      "type": "function",
+      "name": "_extract_examples",
+      "path": "living_docs/parser.py",
+      "line_start": 177,
+      "line_end": 201,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "code:living_docs/cli.py",
+      "type": "code",
+      "name": "cli",
+      "path": "living_docs/cli.py",
+      "line_start": 0,
+      "line_end": 0,
+      "content_hash": "6f154def",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:load_config",
+      "type": "function",
+      "name": "load_config",
+      "path": "living_docs/cli.py",
+      "line_start": 23,
+      "line_end": 37,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_init",
+      "type": "function",
+      "name": "cmd_init",
+      "path": "living_docs/cli.py",
+      "line_start": 40,
+      "line_end": 90,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_health",
+      "type": "function",
+      "name": "cmd_health",
+      "path": "living_docs/cli.py",
+      "line_start": 93,
+      "line_end": 157,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_stale",
+      "type": "function",
+      "name": "cmd_stale",
+      "path": "living_docs/cli.py",
+      "line_start": 160,
+      "line_end": 193,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_generate",
+      "type": "function",
+      "name": "cmd_generate",
+      "path": "living_docs/cli.py",
+      "line_start": 196,
+      "line_end": 224,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_sync",
+      "type": "function",
+      "name": "cmd_sync",
+      "path": "living_docs/cli.py",
+      "line_start": 227,
+      "line_end": 255,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_watch",
+      "type": "function",
+      "name": "cmd_watch",
+      "path": "living_docs/cli.py",
+      "line_start": 258,
+      "line_end": 278,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_stop",
+      "type": "function",
+      "name": "cmd_stop",
+      "path": "living_docs/cli.py",
+      "line_start": 281,
+      "line_end": 292,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_status",
+      "type": "function",
+      "name": "cmd_status",
+      "path": "living_docs/cli.py",
+      "line_start": 295,
+      "line_end": 307,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_improve",
+      "type": "function",
+      "name": "cmd_improve",
+      "path": "living_docs/cli.py",
+      "line_start": 310,
+      "line_end": 408,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_ci",
+      "type": "function",
+      "name": "cmd_ci",
+      "path": "living_docs/cli.py",
+      "line_start": 411,
+      "line_end": 458,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_related",
+      "type": "function",
+      "name": "cmd_related",
+      "path": "living_docs/cli.py",
+      "line_start": 461,
+      "line_end": 566,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_setup_ci",
+      "type": "function",
+      "name": "cmd_setup_ci",
+      "path": "living_docs/cli.py",
+      "line_start": 569,
+      "line_end": 595,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_diff",
+      "type": "function",
+      "name": "cmd_diff",
+      "path": "living_docs/cli.py",
+      "line_start": 598,
+      "line_end": 672,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_pr_check",
+      "type": "function",
+      "name": "cmd_pr_check",
+      "path": "living_docs/cli.py",
+      "line_start": 675,
+      "line_end": 715,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_graph",
+      "type": "function",
+      "name": "cmd_graph",
+      "path": "living_docs/cli.py",
+      "line_start": 718,
+      "line_end": 809,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_coverage",
+      "type": "function",
+      "name": "cmd_coverage",
+      "path": "living_docs/cli.py",
+      "line_start": 812,
+      "line_end": 866,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:cmd_examples",
+      "type": "function",
+      "name": "cmd_examples",
+      "path": "living_docs/cli.py",
+      "line_start": 869,
+      "line_end": 909,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/cli.py:main",
+      "type": "function",
+      "name": "main",
+      "path": "living_docs/cli.py",
+      "line_start": 912,
+      "line_end": 1034,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "code:living_docs/examples.py",
+      "type": "code",
+      "name": "examples",
+      "path": "living_docs/examples.py",
+      "line_start": 0,
+      "line_end": 0,
+      "content_hash": "caf34666",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/examples.py:ExampleType",
+      "type": "class",
+      "name": "ExampleType",
+      "path": "living_docs/examples.py",
+      "line_start": 32,
+      "line_end": 40,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/examples.py:ValidationResult",
+      "type": "class",
+      "name": "ValidationResult",
+      "path": "living_docs/examples.py",
+      "line_start": 43,
+      "line_end": 52,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/examples.py:CodeExample",
+      "type": "class",
+      "name": "CodeExample",
+      "path": "living_docs/examples.py",
+      "line_start": 56,
+      "line_end": 69,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/examples.py:ValidationReport",
+      "type": "class",
+      "name": "ValidationReport",
+      "path": "living_docs/examples.py",
+      "line_start": 73,
+      "line_end": 84,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/examples.py:ExamplesReport",
+      "type": "class",
+      "name": "ExamplesReport",
+      "path": "living_docs/examples.py",
+      "line_start": 88,
+      "line_end": 124,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/examples.py:ExampleExtractor",
+      "type": "class",
+      "name": "ExampleExtractor",
+      "path": "living_docs/examples.py",
+      "line_start": 127,
+      "line_end": 258,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/examples.py:PythonValidator",
+      "type": "class",
+      "name": "PythonValidator",
+      "path": "living_docs/examples.py",
+      "line_start": 261,
+      "line_end": 547,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/examples.py:ExamplesValidator",
+      "type": "class",
+      "name": "ExamplesValidator",
+      "path": "living_docs/examples.py",
+      "line_start": 550,
+      "line_end": 670,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:validate_examples",
+      "type": "function",
+      "name": "validate_examples",
+      "path": "living_docs/examples.py",
+      "line_start": 673,
+      "line_end": 703,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:__post_init__",
+      "type": "function",
+      "name": "__post_init__",
+      "path": "living_docs/examples.py",
+      "line_start": 67,
+      "line_end": 69,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:is_valid",
+      "type": "function",
+      "name": "is_valid",
+      "path": "living_docs/examples.py",
+      "line_start": 83,
+      "line_end": 84,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:pass_rate",
+      "type": "function",
+      "name": "pass_rate",
+      "path": "living_docs/examples.py",
+      "line_start": 98,
+      "line_end": 101,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:to_dict",
+      "type": "function",
+      "name": "to_dict",
+      "path": "living_docs/examples.py",
+      "line_start": 103,
+      "line_end": 124,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:__init__",
+      "type": "function",
+      "name": "__init__",
+      "path": "living_docs/examples.py",
+      "line_start": 553,
+      "line_end": 557,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:extract_from_file",
+      "type": "function",
+      "name": "extract_from_file",
+      "path": "living_docs/examples.py",
+      "line_start": 167,
+      "line_end": 240,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:extract_all",
+      "type": "function",
+      "name": "extract_all",
+      "path": "living_docs/examples.py",
+      "line_start": 242,
+      "line_end": 258,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:validate",
+      "type": "function",
+      "name": "validate",
+      "path": "living_docs/examples.py",
+      "line_start": 268,
+      "line_end": 332,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:_validate_doctest",
+      "type": "function",
+      "name": "_validate_doctest",
+      "path": "living_docs/examples.py",
+      "line_start": 334,
+      "line_end": 412,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:_check_imports",
+      "type": "function",
+      "name": "_check_imports",
+      "path": "living_docs/examples.py",
+      "line_start": 414,
+      "line_end": 429,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:_can_import",
+      "type": "function",
+      "name": "_can_import",
+      "path": "living_docs/examples.py",
+      "line_start": 431,
+      "line_end": 462,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:_check_api_patterns",
+      "type": "function",
+      "name": "_check_api_patterns",
+      "path": "living_docs/examples.py",
+      "line_start": 464,
+      "line_end": 488,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:_is_safe_to_execute",
+      "type": "function",
+      "name": "_is_safe_to_execute",
+      "path": "living_docs/examples.py",
+      "line_start": 490,
+      "line_end": 504,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:_execute_safely",
+      "type": "function",
+      "name": "_execute_safely",
+      "path": "living_docs/examples.py",
+      "line_start": 506,
+      "line_end": 532,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:_suggest_syntax_fix",
+      "type": "function",
+      "name": "_suggest_syntax_fix",
+      "path": "living_docs/examples.py",
+      "line_start": 534,
+      "line_end": 547,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:validate_all",
+      "type": "function",
+      "name": "validate_all",
+      "path": "living_docs/examples.py",
+      "line_start": 559,
+      "line_end": 579,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:_validate_example",
+      "type": "function",
+      "name": "_validate_example",
+      "path": "living_docs/examples.py",
+      "line_start": 581,
+      "line_end": 600,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:_validate_json",
+      "type": "function",
+      "name": "_validate_json",
+      "path": "living_docs/examples.py",
+      "line_start": 602,
+      "line_end": 616,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:_validate_yaml",
+      "type": "function",
+      "name": "_validate_yaml",
+      "path": "living_docs/examples.py",
+      "line_start": 618,
+      "line_end": 639,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/examples.py:_validate_bash",
+      "type": "function",
+      "name": "_validate_bash",
+      "path": "living_docs/examples.py",
+      "line_start": 641,
+      "line_end": 670,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "code:living_docs/watcher.py",
+      "type": "code",
+      "name": "watcher",
+      "path": "living_docs/watcher.py",
+      "line_start": 0,
+      "line_end": 0,
+      "content_hash": "d32a11c9",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/watcher.py:DocSyncHandler",
+      "type": "class",
+      "name": "DocSyncHandler",
+      "path": "living_docs/watcher.py",
+      "line_start": 21,
+      "line_end": 83,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/watcher.py:Daemon",
+      "type": "class",
+      "name": "Daemon",
+      "path": "living_docs/watcher.py",
+      "line_start": 86,
+      "line_end": 236,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/watcher.py:__init__",
+      "type": "function",
+      "name": "__init__",
+      "path": "living_docs/watcher.py",
+      "line_start": 89,
+      "line_end": 98,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/watcher.py:_matches_patterns",
+      "type": "function",
+      "name": "_matches_patterns",
+      "path": "living_docs/watcher.py",
+      "line_start": 38,
+      "line_end": 43,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/watcher.py:_should_process",
+      "type": "function",
+      "name": "_should_process",
+      "path": "living_docs/watcher.py",
+      "line_start": 45,
+      "line_end": 67,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/watcher.py:on_modified",
+      "type": "function",
+      "name": "on_modified",
+      "path": "living_docs/watcher.py",
+      "line_start": 69,
+      "line_end": 75,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/watcher.py:on_created",
+      "type": "function",
+      "name": "on_created",
+      "path": "living_docs/watcher.py",
+      "line_start": 77,
+      "line_end": 83,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/watcher.py:_log",
+      "type": "function",
+      "name": "_log",
+      "path": "living_docs/watcher.py",
+      "line_start": 100,
+      "line_end": 109,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/watcher.py:_on_file_change",
+      "type": "function",
+      "name": "_on_file_change",
+      "path": "living_docs/watcher.py",
+      "line_start": 111,
+      "line_end": 136,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/watcher.py:start",
+      "type": "function",
+      "name": "start",
+      "path": "living_docs/watcher.py",
+      "line_start": 139,
+      "line_end": 186,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/watcher.py:stop",
+      "type": "function",
+      "name": "stop",
+      "path": "living_docs/watcher.py",
+      "line_start": 188,
+      "line_end": 199,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/watcher.py:_handle_signal",
+      "type": "function",
+      "name": "_handle_signal",
+      "path": "living_docs/watcher.py",
+      "line_start": 201,
+      "line_end": 204,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/watcher.py:status",
+      "type": "function",
+      "name": "status",
+      "path": "living_docs/watcher.py",
+      "line_start": 207,
+      "line_end": 222,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/watcher.py:kill",
+      "type": "function",
+      "name": "kill",
+      "path": "living_docs/watcher.py",
+      "line_start": 225,
+      "line_end": 236,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "code:living_docs/staleness.py",
+      "type": "code",
+      "name": "staleness",
+      "path": "living_docs/staleness.py",
+      "line_start": 0,
+      "line_end": 0,
+      "content_hash": "d8249341",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/staleness.py:StalenessReport",
+      "type": "class",
+      "name": "StalenessReport",
+      "path": "living_docs/staleness.py",
+      "line_start": 12,
+      "line_end": 25,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/staleness.py:StalenessCalculator",
+      "type": "class",
+      "name": "StalenessCalculator",
+      "path": "living_docs/staleness.py",
+      "line_start": 28,
+      "line_end": 177,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/staleness.py:find_doc_code_mappings",
+      "type": "function",
+      "name": "find_doc_code_mappings",
+      "path": "living_docs/staleness.py",
+      "line_start": 180,
+      "line_end": 221,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/staleness.py:is_stale",
+      "type": "function",
+      "name": "is_stale",
+      "path": "living_docs/staleness.py",
+      "line_start": 24,
+      "line_end": 25,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/staleness.py:__init__",
+      "type": "function",
+      "name": "__init__",
+      "path": "living_docs/staleness.py",
+      "line_start": 31,
+      "line_end": 34,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/staleness.py:check_doc",
+      "type": "function",
+      "name": "check_doc",
+      "path": "living_docs/staleness.py",
+      "line_start": 36,
+      "line_end": 91,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/staleness.py:_get_last_modified",
+      "type": "function",
+      "name": "_get_last_modified",
+      "path": "living_docs/staleness.py",
+      "line_start": 93,
+      "line_end": 112,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/staleness.py:_get_signature_changes",
+      "type": "function",
+      "name": "_get_signature_changes",
+      "path": "living_docs/staleness.py",
+      "line_start": 114,
+      "line_end": 150,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/staleness.py:_suggest_action",
+      "type": "function",
+      "name": "_suggest_action",
+      "path": "living_docs/staleness.py",
+      "line_start": 152,
+      "line_end": 162,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/staleness.py:scan_project",
+      "type": "function",
+      "name": "scan_project",
+      "path": "living_docs/staleness.py",
+      "line_start": 164,
+      "line_end": 177,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "code:living_docs/usage.py",
+      "type": "code",
+      "name": "usage",
+      "path": "living_docs/usage.py",
+      "line_start": 0,
+      "line_end": 0,
+      "content_hash": "092bcff7",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/usage.py:PageView",
+      "type": "class",
+      "name": "PageView",
+      "path": "living_docs/usage.py",
+      "line_start": 12,
+      "line_end": 19,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/usage.py:UsageStats",
+      "type": "class",
+      "name": "UsageStats",
+      "path": "living_docs/usage.py",
+      "line_start": 23,
+      "line_end": 31,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/usage.py:UsageTracker",
+      "type": "class",
+      "name": "UsageTracker",
+      "path": "living_docs/usage.py",
+      "line_start": 34,
+      "line_end": 170,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/usage.py:generate_tracking_script",
+      "type": "function",
+      "name": "generate_tracking_script",
+      "path": "living_docs/usage.py",
+      "line_start": 173,
+      "line_end": 206,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/usage.py:__init__",
+      "type": "function",
+      "name": "__init__",
+      "path": "living_docs/usage.py",
+      "line_start": 37,
+      "line_end": 41,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/usage.py:record_view",
+      "type": "function",
+      "name": "record_view",
+      "path": "living_docs/usage.py",
+      "line_start": 43,
+      "line_end": 46,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/usage.py:get_events",
+      "type": "function",
+      "name": "get_events",
+      "path": "living_docs/usage.py",
+      "line_start": 48,
+      "line_end": 70,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/usage.py:compute_stats",
+      "type": "function",
+      "name": "compute_stats",
+      "path": "living_docs/usage.py",
+      "line_start": 72,
+      "line_end": 114,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/usage.py:save_stats",
+      "type": "function",
+      "name": "save_stats",
+      "path": "living_docs/usage.py",
+      "line_start": 116,
+      "line_end": 120,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/usage.py:load_stats",
+      "type": "function",
+      "name": "load_stats",
+      "path": "living_docs/usage.py",
+      "line_start": 122,
+      "line_end": 130,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/usage.py:get_insights",
+      "type": "function",
+      "name": "get_insights",
+      "path": "living_docs/usage.py",
+      "line_start": 132,
+      "line_end": 170,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "code:living_docs/diff_analyzer.py",
+      "type": "code",
+      "name": "diff_analyzer",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 0,
+      "line_end": 0,
+      "content_hash": "068e1e27",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/diff_analyzer.py:ChangeType",
+      "type": "class",
+      "name": "ChangeType",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 24,
+      "line_end": 38,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/diff_analyzer.py:CodeChange",
+      "type": "class",
+      "name": "CodeChange",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 42,
+      "line_end": 63,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/diff_analyzer.py:DocImpact",
+      "type": "class",
+      "name": "DocImpact",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 67,
+      "line_end": 84,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/diff_analyzer.py:DiffReport",
+      "type": "class",
+      "name": "DiffReport",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 88,
+      "line_end": 162,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "class:living_docs/diff_analyzer.py:DiffAnalyzer",
+      "type": "class",
+      "name": "DiffAnalyzer",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 165,
+      "line_end": 519,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:analyze_pr",
+      "type": "function",
+      "name": "analyze_pr",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 522,
+      "line_end": 538,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:analyze_staged",
+      "type": "function",
+      "name": "analyze_staged",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 541,
+      "line_end": 544,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:to_dict",
+      "type": "function",
+      "name": "to_dict",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 94,
+      "line_end": 99,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:to_json",
+      "type": "function",
+      "name": "to_json",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 101,
+      "line_end": 102,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:to_markdown",
+      "type": "function",
+      "name": "to_markdown",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 104,
+      "line_end": 145,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:to_github_annotations",
+      "type": "function",
+      "name": "to_github_annotations",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 147,
+      "line_end": 162,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:__init__",
+      "type": "function",
+      "name": "__init__",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 188,
+      "line_end": 190,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:_load_doc_mappings",
+      "type": "function",
+      "name": "_load_doc_mappings",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 192,
+      "line_end": 204,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:_default_mappings",
+      "type": "function",
+      "name": "_default_mappings",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 206,
+      "line_end": 222,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:get_diff",
+      "type": "function",
+      "name": "get_diff",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 224,
+      "line_end": 246,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:get_changed_files",
+      "type": "function",
+      "name": "get_changed_files",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 248,
+      "line_end": 268,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:analyze",
+      "type": "function",
+      "name": "analyze",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 270,
+      "line_end": 289,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:_parse_diff",
+      "type": "function",
+      "name": "_parse_diff",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 291,
+      "line_end": 327,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:_parse_python_line",
+      "type": "function",
+      "name": "_parse_python_line",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 329,
+      "line_end": 370,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:_parse_typescript_line",
+      "type": "function",
+      "name": "_parse_typescript_line",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 372,
+      "line_end": 396,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:_map_to_docs",
+      "type": "function",
+      "name": "_map_to_docs",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 398,
+      "line_end": 428,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:_find_affected_docs",
+      "type": "function",
+      "name": "_find_affected_docs",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 430,
+      "line_end": 446,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:_guess_section",
+      "type": "function",
+      "name": "_guess_section",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 448,
+      "line_end": 458,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:_generate_reason",
+      "type": "function",
+      "name": "_generate_reason",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 460,
+      "line_end": 472,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:_calculate_confidence",
+      "type": "function",
+      "name": "_calculate_confidence",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 474,
+      "line_end": 490,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:_suggest_action",
+      "type": "function",
+      "name": "_suggest_action",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 492,
+      "line_end": 500,
+      "content_hash": "",
+      "metadata": {}
+    },
+    {
+      "id": "func:living_docs/diff_analyzer.py:_generate_summary",
+      "type": "function",
+      "name": "_generate_summary",
+      "path": "living_docs/diff_analyzer.py",
+      "line_start": 502,
+      "line_end": 519,
+      "content_hash": "",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "source": "code:living_docs/sync.py",
+      "target": "class:living_docs/sync.py:SyncAction",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/sync.py",
+      "target": "class:living_docs/sync.py:SyncEngine",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/sync.py",
+      "target": "func:living_docs/sync.py:get_diff",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/sync.py",
+      "target": "func:living_docs/sync.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/sync.py",
+      "target": "func:living_docs/sync.py:scan_code",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/sync.py",
+      "target": "func:living_docs/sync.py:find_doc_for_code",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/sync.py",
+      "target": "func:living_docs/sync.py:generate_doc_content",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/sync.py",
+      "target": "func:living_docs/sync.py:compute_sync_actions",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/sync.py",
+      "target": "func:living_docs/sync.py:_content_differs",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/sync.py",
+      "target": "func:living_docs/sync.py:apply_action",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "class:living_docs/semantic.py:Chunk",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "class:living_docs/semantic.py:SimilarityResult",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "class:living_docs/semantic.py:EmbeddingProvider",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "class:living_docs/semantic.py:AnthropicEmbeddings",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "class:living_docs/semantic.py:OpenAIEmbeddings",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "class:living_docs/semantic.py:LocalEmbeddings",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "class:living_docs/semantic.py:SemanticIndex",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:get_embedding_provider",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:embed",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:embed_single",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:embed",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:embed",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:_get_st_model",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:embed",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:_embed_ollama",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:_compute_hash",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:_chunk_code",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:_chunk_doc",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:add_file",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:build_embeddings",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:_cosine_similarity",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:find_related_docs",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:find_docs_needing_update",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:get_code_context_for_doc",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:save",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/semantic.py",
+      "target": "func:living_docs/semantic.py:load",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cicd.py",
+      "target": "class:living_docs/cicd.py:CIResult",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cicd.py",
+      "target": "class:living_docs/cicd.py:CIReport",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cicd.py",
+      "target": "func:living_docs/cicd.py:run_ci_check",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cicd.py",
+      "target": "func:living_docs/cicd.py:generate_github_action",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cicd.py",
+      "target": "func:living_docs/cicd.py:generate_pre_commit_hook",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cicd.py",
+      "target": "func:living_docs/cicd.py:generate_gitlab_ci",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cicd.py",
+      "target": "func:living_docs/cicd.py:cmd_ci",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cicd.py",
+      "target": "func:living_docs/cicd.py:to_github_output",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cicd.py",
+      "target": "func:living_docs/cicd.py:to_github_annotations",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cicd.py",
+      "target": "func:living_docs/cicd.py:to_markdown",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/ai.py",
+      "target": "class:living_docs/ai.py:DocAnalysis",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/ai.py",
+      "target": "class:living_docs/ai.py:AIConfig",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/ai.py",
+      "target": "class:living_docs/ai.py:DocImprover",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/ai.py",
+      "target": "func:living_docs/ai.py:load_ai_config",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/ai.py",
+      "target": "func:living_docs/ai.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/ai.py",
+      "target": "func:living_docs/ai.py:_get_api_key",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/ai.py",
+      "target": "func:living_docs/ai.py:_call_anthropic",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/ai.py",
+      "target": "func:living_docs/ai.py:_call_openai",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/ai.py",
+      "target": "func:living_docs/ai.py:_call_local",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/ai.py",
+      "target": "func:living_docs/ai.py:_call_llm",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/ai.py",
+      "target": "func:living_docs/ai.py:_extract_json",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/ai.py",
+      "target": "func:living_docs/ai.py:analyze",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/ai.py",
+      "target": "func:living_docs/ai.py:improve",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/ai.py",
+      "target": "func:living_docs/ai.py:batch_analyze",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "class:living_docs/graph.py:EdgeType",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "class:living_docs/graph.py:NodeType",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "class:living_docs/graph.py:Node",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "class:living_docs/graph.py:Edge",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "class:living_docs/graph.py:DocGraph",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "class:living_docs/graph.py:GraphBuilder",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:get_reading_order",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:suggest_navigation",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:__hash__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:__eq__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:__hash__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:add_node",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:add_edge",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:get_node",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:get_neighbors",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:find_path",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:get_orphans",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:get_hubs",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:get_subgraph",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:to_dict",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:from_dict",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:save",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:load",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:to_mermaid",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:build",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:_add_doc_nodes",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:_add_doc_file",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:_add_code_nodes",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:_add_code_file",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:_extract_references",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/graph.py",
+      "target": "func:living_docs/graph.py:_link_docs_to_code",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "class:living_docs/coverage.py:CoverageItem",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "class:living_docs/coverage.py:FileCoverage",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "class:living_docs/coverage.py:CoverageReport",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "class:living_docs/coverage.py:CoverageAnalyzer",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "class:living_docs/coverage.py:CoverageFormatter",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:generate_coverage_report",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:is_documented",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:coverage_score",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:coverage_percent",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:badge_color",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:overall_percent",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:to_dict",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:to_json",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:analyze",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:_should_ignore",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:_analyze_file",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:_analyze_python",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:_analyze_javascript",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:_assess_docstring_quality",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:_save_history",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:get_trend",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:to_ascii_treemap",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:to_markdown",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:to_badge_url",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:to_html_treemap",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/coverage.py",
+      "target": "func:living_docs/coverage.py:to_trend_sparkline",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/parser.py",
+      "target": "class:living_docs/parser.py:DocItem",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/parser.py",
+      "target": "class:living_docs/parser.py:PythonParser",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/parser.py",
+      "target": "class:living_docs/parser.py:TypeScriptParser",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/parser.py",
+      "target": "func:living_docs/parser.py:get_parser",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/parser.py",
+      "target": "func:living_docs/parser.py:is_documented",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/parser.py",
+      "target": "func:living_docs/parser.py:doc_quality_score",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/parser.py",
+      "target": "func:living_docs/parser.py:parse_file",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/parser.py",
+      "target": "func:living_docs/parser.py:_parse_function",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/parser.py",
+      "target": "func:living_docs/parser.py:_parse_class",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/parser.py",
+      "target": "func:living_docs/parser.py:_build_signature",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/parser.py",
+      "target": "func:living_docs/parser.py:_get_annotation",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/parser.py",
+      "target": "func:living_docs/parser.py:_get_name",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/parser.py",
+      "target": "func:living_docs/parser.py:_extract_imports",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/parser.py",
+      "target": "func:living_docs/parser.py:_extract_examples",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/parser.py",
+      "target": "func:living_docs/parser.py:parse_file",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:load_config",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_init",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_health",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_stale",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_generate",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_sync",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_watch",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_stop",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_status",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_improve",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_ci",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_related",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_setup_ci",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_diff",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_pr_check",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_graph",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_coverage",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:cmd_examples",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/cli.py",
+      "target": "func:living_docs/cli.py:main",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "class:living_docs/examples.py:ExampleType",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "class:living_docs/examples.py:ValidationResult",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "class:living_docs/examples.py:CodeExample",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "class:living_docs/examples.py:ValidationReport",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "class:living_docs/examples.py:ExamplesReport",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "class:living_docs/examples.py:ExampleExtractor",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "class:living_docs/examples.py:PythonValidator",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "class:living_docs/examples.py:ExamplesValidator",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:validate_examples",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:__post_init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:is_valid",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:pass_rate",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:to_dict",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:extract_from_file",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:extract_all",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:validate",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:_validate_doctest",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:_check_imports",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:_can_import",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:_check_api_patterns",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:_is_safe_to_execute",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:_execute_safely",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:_suggest_syntax_fix",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:validate_all",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:_validate_example",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:_validate_json",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:_validate_yaml",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/examples.py",
+      "target": "func:living_docs/examples.py:_validate_bash",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/watcher.py",
+      "target": "class:living_docs/watcher.py:DocSyncHandler",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/watcher.py",
+      "target": "class:living_docs/watcher.py:Daemon",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/watcher.py",
+      "target": "func:living_docs/watcher.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/watcher.py",
+      "target": "func:living_docs/watcher.py:_matches_patterns",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/watcher.py",
+      "target": "func:living_docs/watcher.py:_should_process",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/watcher.py",
+      "target": "func:living_docs/watcher.py:on_modified",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/watcher.py",
+      "target": "func:living_docs/watcher.py:on_created",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/watcher.py",
+      "target": "func:living_docs/watcher.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/watcher.py",
+      "target": "func:living_docs/watcher.py:_log",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/watcher.py",
+      "target": "func:living_docs/watcher.py:_on_file_change",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/watcher.py",
+      "target": "func:living_docs/watcher.py:start",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/watcher.py",
+      "target": "func:living_docs/watcher.py:stop",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/watcher.py",
+      "target": "func:living_docs/watcher.py:_handle_signal",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/watcher.py",
+      "target": "func:living_docs/watcher.py:status",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/watcher.py",
+      "target": "func:living_docs/watcher.py:kill",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/staleness.py",
+      "target": "class:living_docs/staleness.py:StalenessReport",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/staleness.py",
+      "target": "class:living_docs/staleness.py:StalenessCalculator",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/staleness.py",
+      "target": "func:living_docs/staleness.py:find_doc_code_mappings",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/staleness.py",
+      "target": "func:living_docs/staleness.py:is_stale",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/staleness.py",
+      "target": "func:living_docs/staleness.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/staleness.py",
+      "target": "func:living_docs/staleness.py:check_doc",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/staleness.py",
+      "target": "func:living_docs/staleness.py:_get_last_modified",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/staleness.py",
+      "target": "func:living_docs/staleness.py:_get_signature_changes",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/staleness.py",
+      "target": "func:living_docs/staleness.py:_suggest_action",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/staleness.py",
+      "target": "func:living_docs/staleness.py:scan_project",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/usage.py",
+      "target": "class:living_docs/usage.py:PageView",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/usage.py",
+      "target": "class:living_docs/usage.py:UsageStats",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/usage.py",
+      "target": "class:living_docs/usage.py:UsageTracker",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/usage.py",
+      "target": "func:living_docs/usage.py:generate_tracking_script",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/usage.py",
+      "target": "func:living_docs/usage.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/usage.py",
+      "target": "func:living_docs/usage.py:record_view",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/usage.py",
+      "target": "func:living_docs/usage.py:get_events",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/usage.py",
+      "target": "func:living_docs/usage.py:compute_stats",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/usage.py",
+      "target": "func:living_docs/usage.py:save_stats",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/usage.py",
+      "target": "func:living_docs/usage.py:load_stats",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/usage.py",
+      "target": "func:living_docs/usage.py:get_insights",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "class:living_docs/diff_analyzer.py:ChangeType",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "class:living_docs/diff_analyzer.py:CodeChange",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "class:living_docs/diff_analyzer.py:DocImpact",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "class:living_docs/diff_analyzer.py:DiffReport",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "class:living_docs/diff_analyzer.py:DiffAnalyzer",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:analyze_pr",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:analyze_staged",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:to_dict",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:to_dict",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:to_dict",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:to_json",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:to_markdown",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:to_github_annotations",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:__init__",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:_load_doc_mappings",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:_default_mappings",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:get_diff",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:get_changed_files",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:analyze",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:_parse_diff",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:_parse_python_line",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:_parse_typescript_line",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:_map_to_docs",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:_find_affected_docs",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:_guess_section",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:_generate_reason",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:_calculate_confidence",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:_suggest_action",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "code:living_docs/diff_analyzer.py",
+      "target": "func:living_docs/diff_analyzer.py:_generate_summary",
+      "type": "parent",
+      "weight": 1.0,
+      "metadata": {}
+    }
+  ]
+}
