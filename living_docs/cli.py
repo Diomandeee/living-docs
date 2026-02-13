@@ -1125,6 +1125,235 @@ def cmd_explore(args):
     return 0
 
 
+# ============================================================
+# Gen 10 Commands - Enhanced Living Docs
+# ============================================================
+
+def cmd_dashboard(args):
+    """Display documentation health dashboard."""
+    from .dashboard import Dashboard
+    
+    project_root = Path(args.path).resolve()
+    config = load_config(project_root)
+    
+    dashboard = Dashboard(project_root, config)
+    metrics = dashboard.collect_metrics()
+    
+    # Save metrics for trending
+    if not args.no_save:
+        dashboard.save_metrics(metrics)
+    
+    # Render output
+    if args.format == 'html':
+        output = dashboard.render_html(metrics)
+    elif args.format == 'json':
+        output = dashboard.render_json(metrics)
+    else:
+        output = dashboard.render_ascii(metrics)
+    
+    if args.output:
+        Path(args.output).write_text(output)
+        print(f"✓ Dashboard saved to {args.output}")
+    else:
+        print(output)
+    
+    return 0
+
+
+def cmd_freshness(args):
+    """Check documentation freshness with detailed scoring."""
+    from .freshness import FreshnessScorer, format_freshness_report
+    from .mapping import CodeDocMapper
+    
+    project_root = Path(args.path).resolve()
+    config = load_config(project_root)
+    
+    print("🕐 Analyzing documentation freshness...\n")
+    
+    # Get mappings
+    mapper = CodeDocMapper(project_root, config)
+    mappings = mapper.find_all_mappings()
+    
+    # Build doc-code map
+    doc_code_map = {}
+    for mapping in mappings:
+        doc_path = project_root / mapping.doc_path
+        code_path = project_root / mapping.code_path
+        if doc_path not in doc_code_map:
+            doc_code_map[doc_path] = []
+        doc_code_map[doc_path].append(code_path)
+    
+    # Score freshness
+    scorer = FreshnessScorer(project_root, config)
+    reports = scorer.score_all(doc_code_map)
+    
+    if args.format == 'json':
+        import json as json_module
+        print(json_module.dumps([r.to_dict() for r in reports], indent=2))
+    else:
+        print(format_freshness_report(reports))
+    
+    # Check threshold
+    if args.min_score:
+        stale_count = sum(1 for r in reports if r.score < args.min_score)
+        if stale_count > 0:
+            print(f"\n❌ {stale_count} docs below freshness threshold ({args.min_score:.0%})")
+            return 1
+    
+    return 0
+
+
+def cmd_mapping(args):
+    """Analyze code-to-documentation mappings."""
+    from .mapping import CodeDocMapper, format_mapping_report
+    
+    project_root = Path(args.path).resolve()
+    config = load_config(project_root)
+    
+    print("📎 Analyzing code-to-documentation mappings...\n")
+    
+    mapper = CodeDocMapper(project_root, config)
+    
+    if args.action == 'report':
+        if args.format == 'json':
+            import json as json_module
+            print(json_module.dumps(mapper.get_mapping_report(), indent=2))
+        else:
+            print(format_mapping_report(mapper))
+    
+    elif args.action == 'find-doc':
+        if not args.file:
+            print("❌ --file required for find-doc")
+            return 1
+        
+        code_path = Path(args.file)
+        if not code_path.is_absolute():
+            code_path = project_root / code_path
+        
+        mapping = mapper.find_doc_for_code(code_path)
+        
+        if mapping:
+            print(f"📄 Documentation for {args.file}:\n")
+            print(f"   Path: {mapping.doc_path}")
+            print(f"   Confidence: {mapping.confidence.value} ({mapping.confidence_score:.0%})")
+            print(f"   Reasons:")
+            for reason in mapping.match_reasons:
+                print(f"     • {reason}")
+        else:
+            print(f"❌ No documentation found for {args.file}")
+    
+    elif args.action == 'find-code':
+        if not args.file:
+            print("❌ --file required for find-code")
+            return 1
+        
+        doc_path = Path(args.file)
+        if not doc_path.is_absolute():
+            doc_path = project_root / doc_path
+        
+        mappings = mapper.find_code_for_doc(doc_path)
+        
+        if mappings:
+            print(f"💻 Code files for {args.file}:\n")
+            for m in mappings:
+                print(f"   {m.code_path}")
+                print(f"     Confidence: {m.confidence.value} ({m.confidence_score:.0%})")
+        else:
+            print(f"❌ No code files found for {args.file}")
+    
+    return 0
+
+
+def cmd_alerts(args):
+    """Configure and test staleness alerts."""
+    from .alerts import AlertManager, AlertConfig, AlertChannel, AlertSeverity
+    from .freshness import FreshnessScorer
+    from .mapping import CodeDocMapper
+    
+    project_root = Path(args.path).resolve()
+    config = load_config(project_root)
+    
+    if args.action == 'test':
+        print("🔔 Testing alert configuration...\n")
+        
+        # Build alert config
+        alert_config = AlertConfig(
+            enabled=True,
+            channels=[AlertChannel.CONSOLE],
+            min_severity=AlertSeverity.WARNING,
+        )
+        
+        if args.webhook:
+            alert_config.webhook_url = args.webhook
+            alert_config.channels.append(AlertChannel.WEBHOOK)
+        
+        manager = AlertManager(alert_config, project_root / ".living-docs")
+        
+        # Get freshness reports
+        mapper = CodeDocMapper(project_root, config)
+        mappings = mapper.find_all_mappings()
+        
+        doc_code_map = {}
+        for mapping in mappings:
+            doc_path = project_root / mapping.doc_path
+            code_path = project_root / mapping.code_path
+            if doc_path not in doc_code_map:
+                doc_code_map[doc_path] = []
+            doc_code_map[doc_path].append(code_path)
+        
+        scorer = FreshnessScorer(project_root, config)
+        reports = scorer.score_all(doc_code_map)
+        
+        # Generate and send alerts
+        alerts = manager.check_and_alert(reports)
+        
+        print(f"\n✓ Generated {len(alerts)} alerts")
+    
+    elif args.action == 'digest':
+        print("📊 Sending documentation health digest...\n")
+        
+        alert_config = AlertConfig(
+            enabled=True,
+            channels=[AlertChannel.CONSOLE],
+        )
+        
+        if args.webhook:
+            alert_config.webhook_url = args.webhook
+            alert_config.channels.append(AlertChannel.WEBHOOK)
+        
+        manager = AlertManager(alert_config, project_root / ".living-docs")
+        
+        # Get freshness reports
+        mapper = CodeDocMapper(project_root, config)
+        mappings = mapper.find_all_mappings()
+        
+        doc_code_map = {}
+        for mapping in mappings:
+            doc_path = project_root / mapping.doc_path
+            code_path = project_root / mapping.code_path
+            if doc_path not in doc_code_map:
+                doc_code_map[doc_path] = []
+            doc_code_map[doc_path].append(code_path)
+        
+        scorer = FreshnessScorer(project_root, config)
+        reports = scorer.score_all(doc_code_map)
+        
+        manager.send_digest(reports)
+        print("✓ Digest sent")
+    
+    elif args.action == 'config':
+        print("🔧 Alert configuration:\n")
+        alerts_config = config.get('alerts', {})
+        
+        print(f"  Enabled: {alerts_config.get('enabled', True)}")
+        print(f"  Channels: {alerts_config.get('channels', ['console'])}")
+        print(f"  Min severity: {alerts_config.get('min_severity', 'warning')}")
+        print(f"  Cooldown: {alerts_config.get('cooldown_hours', 24)} hours")
+        print(f"  Webhook: {'configured' if alerts_config.get('webhook_url') else 'not configured'}")
+    
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(
         prog='living-docs',
@@ -1255,6 +1484,39 @@ def main():
     explore_parser.add_argument('--search', '-q', help='Search query (non-interactive)')
     explore_parser.add_argument('--format', '-f', choices=['ascii', 'json'], default='ascii')
     
+    # ============================================================
+    # Gen 10 - Enhanced Living Docs
+    # ============================================================
+    
+    # dashboard (Gen 10)
+    dashboard_parser = subparsers.add_parser('dashboard', help='Display documentation health dashboard')
+    dashboard_parser.add_argument('--format', '-f', choices=['ascii', 'html', 'json'], default='ascii',
+                                   help='Output format')
+    dashboard_parser.add_argument('--output', '-o', help='Save dashboard to file')
+    dashboard_parser.add_argument('--no-save', action='store_true', help='Don\'t save metrics for trending')
+    
+    # freshness (Gen 10)
+    freshness_parser = subparsers.add_parser('freshness', help='Check documentation freshness with detailed scoring')
+    freshness_parser.add_argument('--format', '-f', choices=['text', 'json'], default='text',
+                                   help='Output format')
+    freshness_parser.add_argument('--min-score', type=float, help='Fail if any doc below this score (0-1)')
+    
+    # mapping (Gen 10)
+    mapping_parser = subparsers.add_parser('mapping', help='Analyze code-to-documentation mappings')
+    mapping_parser.add_argument('action', nargs='?', default='report',
+                                 choices=['report', 'find-doc', 'find-code'],
+                                 help='Mapping action')
+    mapping_parser.add_argument('--file', help='File to find mapping for')
+    mapping_parser.add_argument('--format', '-f', choices=['text', 'json'], default='text',
+                                 help='Output format')
+    
+    # alerts (Gen 10)
+    alerts_parser = subparsers.add_parser('alerts', help='Configure and test staleness alerts')
+    alerts_parser.add_argument('action', nargs='?', default='config',
+                                choices=['config', 'test', 'digest'],
+                                help='Alert action')
+    alerts_parser.add_argument('--webhook', help='Webhook URL for testing')
+    
     args = parser.parse_args()
     
     commands = {
@@ -1279,6 +1541,11 @@ def main():
         'auto-pr': cmd_auto_pr,
         'from-tests': cmd_from_tests,
         'explore': cmd_explore,
+        # Gen 10 - Enhanced Living Docs
+        'dashboard': cmd_dashboard,
+        'freshness': cmd_freshness,
+        'mapping': cmd_mapping,
+        'alerts': cmd_alerts,
     }
     
     return commands[args.command](args)
